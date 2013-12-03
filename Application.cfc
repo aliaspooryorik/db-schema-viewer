@@ -2,8 +2,6 @@ component extends="lib.org.corfield.framework" {
 
 	this.name = "db-schema-viewer-by-naming-convention";
 
-	this.datasource = "db-schema-viewer";
-
 	this.applicationroot = getDirectoryFromPath(getCurrentTemplatePath());
 	this.mappings[ "/lib" ] = this.applicationroot & "lib/";
 	this.mappings[ "/model" ] = this.applicationroot & "model/";
@@ -17,12 +15,17 @@ component extends="lib.org.corfield.framework" {
 
 	void function setupApplication(){
 		var beanFactory = new lib.org.corfield.ioc("/model", {singletonPattern = "(Service|DAO)$"});
+		var Config = {
+			DATASOURCE = "db-schema-viewer",
+			SCHEMA = "wld"
+		};
+		beanFactory.addBean("config", Config);
 		setBeanFactory(beanFactory);
 	}
 
 	void function setupView(){
 		// stuff needed to build the layout
-		rc.tables = getBeanFactory().getBean("SchemaService" ).listTables();
+		rc.tables = getBeanFactory().getBean("SchemaService").listTables();
 	}
 
 }
