@@ -38,16 +38,13 @@
 				</form>
 			</div>
 
-	<!---
-			<nav id="menu" role="navigation">
-				<ul>
-					<li><a class="navbar-brand" href="#buildUrl("")#">Table selector</a></li>
-				</ul>
-			</nav>
-	    	<hr>--->
-			<section class="col-1-1">
+			<section class="col-1-1 content">
 				#body#
 			</section>
+
+			<footer class="col-1-1 footer">
+				Found a bug or have an improvement? <a href="https://github.com/aliaspooryorik/db-schema-viewer">Fork me on github</a>
+			</footer>
 
 		</div>
 

@@ -1,5 +1,6 @@
 body {
 	font-family: 'Raleway', sans-serif;
+	background-color:#F0F0F0;
 }
 
 table {
@@ -10,26 +11,45 @@ table {
 
 td, th{
 	padding:0.2em;
+	text-align:left;
 }
 th {
-	background-color:#e0e0e0;
+	background-color:#C8DEFD;
+	border-bottom:1px solid #3D3D3D;
 }
 
 
-header.banner {
-	background-color:#f0f0f0;
+.banner {
+	background-color:#D3D3D3;
+	padding:0.5em;
+	border-radius:0.5em 0.5em 0em 0em;
+}
+
+.content {	
+	background-color:white;
 	padding:0.5em;
 }
 
-div.toolbar {
-	background-color:#C8DEFD;
-	padding-top:0.7em;
-	padding-bottom:0.7em;
+.content a{
+	color:#5E7FB3;
 }
 
+.toolbar, .footer {
+	background-color:#3D3D3D;
+	padding:0.7em 0.5em 0.7em 0.5em;
+	color:whitesmoke;
+}
+.toolbar, .footer a{
+	color:whitesmoke;
+}
+
+
+.chosen-container .chosen-results li{
+	color:#5E7FB3;
+}
 .keytype_1 {
-	background-color:#E5FFE4;
+	background-color:#E0E0E0;
 }
 .keytype_0 {
-	background-color:#FFFFE8;
+	background-color:#F0F0F0;
 }
