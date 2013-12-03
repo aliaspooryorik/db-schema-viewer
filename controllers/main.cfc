@@ -13,14 +13,18 @@ component accessors="true"{
 	// ------------------------ PUBLIC METHODS ------------------------ //
 
 	void function default(required struct rc){
-		rc.tables = variables.SchemaService.listTables();
+
+	}
+
+	void function showcolumn(required struct rc){
+		rc.tableinfo = variables.SchemaService.getTablesWithColumn(rc.column);
 	}
 
 	void function showtable(required struct rc){
 		if(structkeyexists(rc,"pk")){
 			rc.table = variables.SchemaService.getTableNameFromPK(rc.pk).tablename;
 		}
-		
+
 		rc.tableinfo = variables.SchemaService.getTableDetails(rc.table);
 		rc.linkedtables = variables.SchemaService.listLinkedTables(rc.table);
 	}

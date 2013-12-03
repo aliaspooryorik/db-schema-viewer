@@ -9,11 +9,16 @@ component accessors="true" hint="I am the public facade for the Schema package"{
 	SchemaService function init(){
 		return this;
 	}
-	
+
 	// ------------------------ PUBLIC ------------------------ //
 
 	any function getTableNameFromPK(required primarykeycolumn){
-		return variables.SchemaDAO.getTableName(primarykeycolumn=arguments.primarykeycolumn);
+		return variables.SchemaDAO.getTableNameFromPK(primarykeycolumn=arguments.primarykeycolumn);
+	}
+
+	SchemaIterator function getTablesWithColumn(required column){
+		var rs = variables.SchemaDAO.getTablesWithColumn(column=arguments.column);
+		return new SchemaIterator(rs);
 	}
 
 	SchemaIterator function getTableDetails(required tablename){

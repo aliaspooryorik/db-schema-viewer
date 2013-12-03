@@ -1,0 +1,35 @@
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+table {
+	width:100%;
+	border-collapse: collapse;	
+	border-spacing: 0;
+}
+
+td, th{
+	padding:0.2em;
+}
+th {
+	background-color:#e0e0e0;
+}
+
+
+header.banner {
+	background-color:#f0f0f0;
+	padding:0.5em;
+}
+
+div.toolbar {
+	background-color:#C8DEFD;
+	padding-top:0.7em;
+	padding-bottom:0.7em;
+}
+
+.keytype_1 {
+	background-color:#E5FFE4;
+}
+.keytype_0 {
+	background-color:#FFFFE8;
+}

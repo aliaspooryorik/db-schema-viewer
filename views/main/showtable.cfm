@@ -12,7 +12,7 @@
 	</thead>
 	<tbody>
 <cfloop condition="#rc.tableinfo.hasNext()#">
-		<tr>
+		<tr class="keytype_#rc.tableinfo.isprimarykey()#">
 			<td>
 				<cfif rc.tableinfo.isforeignkey()>
 					<a href="#buildUrl(action=".showtable",querystring="pk=#rc.tableinfo.getcolumnname()#")#">#rc.tableinfo.getcolumnname()#</a>
@@ -28,15 +28,16 @@
 	</tbody>
 </table>
 
-<h1>Table that reference &lsquo;#rc.table#&rsquo;</h1>
+
+<h1>Table(s) that reference &lsquo;#rc.table#&rsquo;</h1>
 
 <cfif !rc.linkedtables.recordcount>
 	<p>No tables reference &lsquo;#rc.table#&rsquo;</p>
-	
+
 <cfelse>
 	<p>#rc.linkedtables.recordcount# tables reference &lsquo;#rc.table#&rsquo;</p>
 
-	
+
 <table>
 	<thead>
 		<tr>
@@ -53,5 +54,5 @@
 </table>
 
 </cfif>
-	
+
 </cfoutput>
