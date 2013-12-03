@@ -21,5 +21,4 @@
 	</tbody>
 </table>
 
-<p>Note: If the column is a Primary Key in multiple tables it is part of a composite key</p>
 </cfoutput>
