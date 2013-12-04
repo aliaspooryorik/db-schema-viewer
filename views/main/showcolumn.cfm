@@ -12,7 +12,7 @@
 <cfloop condition="#rc.tableinfo.hasNext()#">
 		<tr class="keytype_#rc.tableinfo.isprimarykey()#">
 			<td>
-				<a href="#buildUrl(action=".showtable",querystring="pk=#rc.tableinfo.getcolumnname()#")#">#rc.tableinfo.gettablename()#</a>
+				<a href="#buildUrl(action=".showtable",querystring="table=#rc.tableinfo.gettablename()#")#">#rc.tableinfo.gettablename()#</a>
 			</td>
 			<td>#rc.tableinfo.getdatatype()#</td>
 			<td>#rc.tableinfo.getkeytype()#</td>

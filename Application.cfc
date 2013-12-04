@@ -16,8 +16,8 @@ component extends="lib.org.corfield.framework" {
 	void function setupApplication(){
 		var beanFactory = new lib.org.corfield.ioc("/model", {singletonPattern = "(Service|DAO)$"});
 		var Config = {
-			DATASOURCE = "db-schema-viewer",
-			SCHEMA = "wld"
+			DATASOURCE = "your-datasource",
+			SCHEMA = "your-schema"
 		};
 		beanFactory.addBean("config", Config);
 		setBeanFactory(beanFactory);
